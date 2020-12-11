@@ -8,7 +8,15 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-var app = express();
+var app = express(); // -
+
+//set up mangoose coonection
+const mongoose = require('mongoose');
+const mongoDB = 'mongodb+srv://admin:61xprB6OSxuDmNBE@cluster0.pr1gc.mongodb.net/local_library?retryWrites=true&w=majority';
+mongoose.connect(mongoDB,{useNewUrlParser: true, useUnifiedTopology:true});
+const db = mongoose.connection;
+db.on('error',console.error.bind(console, 'MangoDB coonection error'));
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
