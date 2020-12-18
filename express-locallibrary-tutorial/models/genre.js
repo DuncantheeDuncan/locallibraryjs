@@ -15,5 +15,11 @@ GenreSchema
 });
 
 
+// GenreSchema
+// .virtual('name')
+// .get(function(){
+// 	return '/catalog/genre/' +this.name;
+// });
+
 //Export model
 module.exports = mongoose.model('Genre', GenreSchema);
