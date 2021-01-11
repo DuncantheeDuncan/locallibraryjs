@@ -36,6 +36,7 @@ AuthorSchema.virtual('lifespan').get(function() {
 });
 
 
+// https://github.com/mdn/express-locallibrary-tutorial/blob/0665300658e831665cb95d656a28c9f9562bdeae/models/author.js#L35
 AuthorSchema
 .virtual('date_of_birth_formatted')
 .get(function () {
