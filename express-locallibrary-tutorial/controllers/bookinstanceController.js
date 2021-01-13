@@ -50,12 +50,16 @@ exports.bookinstance_create_post = [
 
     // Validate and sanitise fields.
     body('book', 'Book must be specified').trim().isLength({ min: 1 }).escape(),
-    body('imprint', 'Imprint must be specified').trim().isLength({ min: 1 }).escape(),
+    body('imprint', 'Imprint must be specified').trim().isLength({ min: 6 }).escape(),// change value bact to 1
     body('status').escape(),
     body('due_back', 'Invalid date').optional({ checkFalsy: true }).isISO8601().toDate(),
+    // checking for duplicate imprints
+    body('imprint_duplicate', 'Imprint must be unique').escape(),
 
     // Process request after validation and sanitization.
     (req, res, next) => {
+
+      console.log('\n'+req.body.imprint+'\n');
 
         // Extract the validation errors from a request.
         const errors = validationResult(req);

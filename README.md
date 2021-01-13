@@ -16,7 +16,7 @@ As a result we'll store information about books, copies of books, authors and ot
 
 ## Installation
 
-You have first to clone your repo:
+You first have to clone this repo:
 
 	https://github.com/DuncantheeDuncan/locallibraryjs
 
@@ -26,10 +26,15 @@ Then when the repository has been cloned:
 	npm install # installing the dependencies
 	DEBUG=express-locallibrary-tutorial:* npm run devstart
 
+Or 
+
+	run ./start #from the terminal Linux
+
+
 
 ## Usage
 
-When the app is successfully running, look for a consoled message about which port is the webApp running. Open your browser and type:
+When the application is successfully running, look for a consoled message about which port is the webApp running. Open your browser and type:
 
 	127.0.0.1:3000 / localhost:3000
 
@@ -37,10 +42,21 @@ You will be Re-directed to:
 
 	127.0.0.1:3000/catalog # landing page
 
+after you can Browse:
+ - the list of available books
+ - list of Authors
+ - list of book copies available
+ - types of genres
+
+Also you can create:
+ - A new author
+ - New genre
+ - New book
+ - and new book copies
 
 
 
 
-- Installing [Express](https://expressjs.com/en/starter/installing.html)
+## Want to learn more? follow the original post for [Express](https://expressjs.com/en/starter/installing.html)
 
 

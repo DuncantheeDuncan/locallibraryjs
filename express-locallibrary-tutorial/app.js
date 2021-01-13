@@ -25,10 +25,10 @@ app.use(helmet());
 
 
 //set up mangoose coonection
-const mongoose = require('mongoose');
-const mongoDB = process.env.MANGO_CONNECT;
+var mongoose = require('mongoose');
+var mongoDB = process.env.MANGO_CONNECT;
 mongoose.connect(mongoDB,{useNewUrlParser: true, useUnifiedTopology:true});
-const db = mongoose.connection;
+var db = mongoose.connection;
 db.on('error',console.error.bind(console, 'MangoDB coonection error'));
 
 
